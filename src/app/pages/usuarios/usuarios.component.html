@@ -1,0 +1,53 @@
+
+
+<div>
+  <button class= " btn btn-outline-warning mt-2"  (click)="ocult()">{{xxx ? 'ocult' : 'mostrar list'}}</button>
+</div>
+
+
+
+
+
+
+<div class="container-fluid justify-content-center align-items-center mt-3" *ngIf="ocultarTabla">
+
+        <table class="table bg-success" >
+
+          <thead >
+            <tr>
+              <th class="text-center">id</th>
+
+              <th class="text-center">nombre</th>
+
+              <th class="text-center">apellidos</th>
+
+              <th class="text-center">correo</th>
+
+              <th class="text-center">direcciones</th>
+
+              <th class="text-center">numero</th>
+
+              <th class="text-center">activo</th>
+
+           
+            </tr>
+          </thead>
+          <tbody *ngFor=" let post of posts">
+            <tr >
+              <td class="text-center " >{{post.id}}</td>
+
+              <td class="text-center " >{{post.nombres}}</td>
+
+              <td class="text-center " >{{post.apellidos}}</td>
+              <td class="text-center " >{{post.correos}}</td>
+
+              <td class="text-center " >{{post.direcciones}}</td>
+
+              <td class="text-center " >{{post.numeroDocumento}}</td>
+
+              <td class="text-center " >{{post.activo}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+</div>

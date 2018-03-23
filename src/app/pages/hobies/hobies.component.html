@@ -1,0 +1,39 @@
+
+
+<button  class="btn btn-outline-success mt-2" (click)= " ocular()" >{{mostrar ? 'ocular' : 'mostrar'}}</button>
+
+<div class="container p-5 ">
+    
+
+
+    <div *ngIf="mostrar" class=" jumbotron-fluid bg-success">
+
+      <h3 class="display-3 active">hobbies !</h3>
+      <ul >
+        <li *ngFor= " let hobbies of hobby" class="m-auto "> <span>{{hobbies}} </span></li>
+
+      </ul>
+
+ 
+
+      <div>
+         
+      <form (submit)="formulary(datos)">
+
+          <label for="name">Name</label>
+          <input #datos type="text" name="id" placeholder="nombre">
+
+          <button type="submit" >enviar</button>
+      </form>
+       
+      </div>
+
+   
+     
+    </div>
+
+
+
+
+
+</div>
