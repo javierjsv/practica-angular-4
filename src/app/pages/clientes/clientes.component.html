@@ -72,21 +72,21 @@
               <th>Apellidos</th>
               <th>Acciones</th>
               <th>Fecha</th>
-
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let Empleado of Empleados; let i =index ">
-              <td>{{Empleado.name}}</td>
-			  <td>{{Empleado.apellidos}}</td>
-			  <!-- uso de pipes -->
-              <td>{{Empleado.porcentaje | percent}}</td>
-              <td class="clearfix">
-                <a type="button" class="btn btn-outline-primary float-left" (click)="editEmpleado(i)"><i class="fas fa-upload"></i></a>
-                <a type="button" class="btn btn-outline-danger float-right" (click)="deleEmpleado(i)"><i class="fas fa-trash-alt"></i></a>
-
-              </td>
-            </tr>
+            <ng-container *ngFor="let Empleado of Empleados; let i =index ">
+              <tr *ngIf="Empleado.activo">
+                <td>{{Empleado.name}}</td>
+                <td>{{Empleado.apellidos}}</td>
+                <!-- uso de pipes -->
+                <td>{{Empleado.porcentaje | percent}}</td>
+                <td class="clearfix">
+                  <a type="button" class="btn btn-outline-primary float-left" (click)="editEmpleado(i)"><i class="fas fa-upload"></i></a>
+                  <a type="button" class="btn btn-outline-danger float-right" (click)="deleEmpleado(i)"><i class="fas fa-trash-alt"></i></a>
+                </td>
+              </tr>
+            </ng-container>
           </tbody>
         </table>
 
@@ -100,13 +100,19 @@
         <form class="px-5">
           <div class="form-group">
             <label for="name" class=" text-white control-label">Nombre</label>
-            <input type="text" name="name" id="name" [(ngModel)]="model2.name" placeholder="nombre" class="form-control">
+            <input type="text" name="name" id="name" [(ngModel)]="model2.name" placeholder="nombre" class="form-control"
+              required>
           </div>
 
           <div class="form-group">
             <label for="apellidos" class=" text-white control-label">Apellidos</label>
             <input type="text" name="apellidos" id="apellidos" [(ngModel)]="model2.apellidos" placeholder="apellidos"
-              class="form-control">
+              class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="porcentaje" class=" text-white control-label">porcentaje</label>
+            <input type="text" name="porcentaje" id="porcentaje" #name="ngModel" [(ngModel)]="model2.porcentaje"
+              placeholder="porcentaje" class="form-control" required>
           </div>
 
           <div class="form-group">
