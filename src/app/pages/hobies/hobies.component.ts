@@ -7,45 +7,47 @@ import { NgModel } from '@angular/forms';
   styleUrls: ['./hobies.component.css']
 })
 export class HobiesComponent implements OnInit {
-	mostrar : boolean;
-	hobby : string [];
+  mostrar: boolean;
+  hobby: string[];
+  tab: number;
 
   constructor() {
 
-  	this.mostrar = false;
-	this.hobby = ['correr' , 'leer','cantar'];
+    this.mostrar = false;
+    this.hobby = ['correr', 'leer', 'cantar'];
+    this.tab = 1;
 
-   }
-
-
-
-
- ocular(){
-
- 		this.mostrar = !this.mostrar;
-
- }
+  }
 
 
- formulary(datos){
 
-      	console.log(datos.value);
-      	
 
-        if (datos.value == '') {
+  ocular() {
 
-          alert("no puede estar vacio");
-          datos.valu = !null;
+    this.mostrar = !this.mostrar;
 
-        }else{
-            this.hobby.push(datos.value);
-            datos.value = '';
-          return false;
-        }
-          
-          
+  }
 
-      }
+
+  formulary(datos) {
+
+    console.log(datos.value);
+
+
+    if (datos.value == '') {
+
+      alert('no puede estar vacio');
+      datos.valu = !null;
+
+    } else {
+      this.hobby.push(datos.value);
+      datos.value = '';
+      return false;
+    }
+
+
+
+  }
 
 
   ngOnInit() {

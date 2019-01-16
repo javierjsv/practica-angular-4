@@ -12,11 +12,12 @@ import { FormsModule } from '@angular/forms';
 export class ClientesComponent implements OnInit {
 
 	Empleados = [
-		{ 'name': 'Camilo', apellidos: 'Velasco', porcentaje: 0.5827, activo : true },
-		{ 'name': 'Marielas', apellidos: 'Solis', porcentaje: 0.2527, activo : false },
-		{ 'name': 'Marisol', apellidos: 'Solis', porcentaje: 0.2527, activo : true },
-		{ 'name': 'Iker', apellidos: 'Gossen', porcentaje: 0.927, activo : true }
+		{ 'name': 'Camilo', apellidos: 'Velasco', porcentaje: 0.5827, activo: true },
+		{ 'name': 'Marielas', apellidos: 'Solis', porcentaje: 0.2527, activo: false },
+		{ 'name': 'Marisol', apellidos: 'Solis', porcentaje: 0.2527, activo: true },
+		{ 'name': 'Iker', apellidos: 'Gossen', porcentaje: 0.927, activo: true }
 	];
+
 
 	model: any = {};
 	model2: any = {};
@@ -50,7 +51,7 @@ export class ClientesComponent implements OnInit {
 			this.model.name = '';
 			this.model.apellidos = '';
 		}
- 
+
 
 
 
@@ -105,10 +106,10 @@ export class ClientesComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		
-	this.Empleados.forEach(function (value) {
-  console.log(value);
-});
+
+		this.Empleados.forEach(function (value) {
+			console.log(value);
+		});
 	}
 
 
