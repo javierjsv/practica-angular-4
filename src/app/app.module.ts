@@ -14,6 +14,7 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 // importar para utilizar las routes 
 import { RouterModule, Routes} from '@angular/router';
 import { InicioComponent } from './pages/inicio/inicio.component';
+import { InicioDirective } from './pages/inicio/inicio.directive';
 // rutas de la alicaciones hacer constant
 
 export const appRoutes : Routes =[
@@ -35,11 +36,9 @@ export const appRoutes : Routes =[
     ClientesComponent,
     HobiesComponent,
     UsuariosComponent,
-    InicioComponent
-  
-   
-    
-    
+    InicioComponent,
+    InicioDirective
+ 
   ],
   imports: [
     BrowserModule,
