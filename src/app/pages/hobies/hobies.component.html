@@ -1,8 +1,5 @@
-<button class="btn btn-outline-success mt-2" (click)=" ocular()">{{mostrar ? 'ocular' : 'mostrar'}}</button>
-
 <div class="container p-5 ">
-
-
+    <button class="btn btn-outline-success mt-2 mb-2" (click)=" ocular()">{{mostrar ? 'ocular' : 'mostrar'}}</button>
 
   <div *ngIf="mostrar" class=" jumbotron-fluid bg-success">
 
@@ -48,10 +45,10 @@
       </ol>
     </div>
   </ng-container>
-  <div *ngIf="!json" class="bg-warning">
-    <p class="text-danger">
-      No hay datos !!!
-    </p>
+
+  <div *ngIf="!json">
+    <!-- usando angular material-->
+    <mat-card>No hay datos</mat-card>
   </div>
 
 </div>

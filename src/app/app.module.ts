@@ -1,4 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
+
+// BrowserAnimationsModule Angular Material
+// npm install --save @angular/material @angular/cdk @angular/animations
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+
 import { NgModule } from '@angular/core';
 
 
@@ -11,7 +20,7 @@ import { HobiesComponent } from './pages/hobies/hobies.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 
 
-// importar para utilizar las routes 
+// importar para utilizar las routes se puede crear directiva aparte
 import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { InicioDirective } from './pages/inicio/inicio.directive';
@@ -43,9 +52,12 @@ export const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule, // BrowserAnimationsModule Angular Material
+    MatCardModule, // se debe importar el api (ejemplo https://material.angular.io/components/card/api)
+    MatButtonModule, // se debe importar el api (ejemplo https://material.angular.io/components/card/api)
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes) //sebe por para las routes
+    RouterModule.forRoot(appRoutes) // sebe por para las routes
 
   ],
   providers: [

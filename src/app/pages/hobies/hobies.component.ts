@@ -2,6 +2,7 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { JsonService } from '../../service/json.service';
 
+
 @Component({
   selector: 'app-hobies',
   templateUrl: './hobies.component.html',
@@ -14,7 +15,7 @@ export class HobiesComponent implements OnInit {
   title: string;
   json: any = [];
 
-  //Renderer2 escucha elementos del dom 
+  // Renderer2 escucha elementos del dom
   constructor(private renderer2: Renderer2, private jsonService: JsonService) {
 
     this.mostrar = false;
