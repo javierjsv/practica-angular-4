@@ -12,22 +12,23 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 
 
 // importar para utilizar las routes 
-import { RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { InicioDirective } from './pages/inicio/inicio.directive';
+import { JsonService } from './service/json.service';
 // rutas de la alicaciones hacer constant
 
-export const appRoutes : Routes =[
-  { path: '', component : InicioComponent  },
-  { path: 'inicio', component : InicioComponent },
-  { path: 'home',component: AppComponent},
-  { path: 'Hobies', component : HobiesComponent },
-  { path: 'usuarios', component : UsuariosComponent },
-  { path: 'cliente', component : ClientesComponent }
+export const appRoutes: Routes = [
+  { path: '', component: InicioComponent },
+  { path: 'inicio', component: InicioComponent },
+  { path: 'home', component: AppComponent },
+  { path: 'Hobies', component: HobiesComponent },
+  { path: 'usuarios', component: UsuariosComponent },
+  { path: 'cliente', component: ClientesComponent }
 
 
 ];
- 
+
 
 
 @NgModule({
@@ -38,7 +39,7 @@ export const appRoutes : Routes =[
     UsuariosComponent,
     InicioComponent,
     InicioDirective
- 
+
   ],
   imports: [
     BrowserModule,
@@ -46,15 +47,13 @@ export const appRoutes : Routes =[
     HttpClientModule,
     RouterModule.forRoot(appRoutes) //sebe por para las routes
 
-  
-
-
   ],
   providers: [
-  AppService
+    AppService,
+    JsonService
 
   ],
-  
+
 
   bootstrap: [AppComponent]
 })

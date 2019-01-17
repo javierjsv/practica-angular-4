@@ -37,4 +37,21 @@
 
   </div>
 
+  <ng-container *ngIf="json">
+    <p> cantidad de datos {{json.length}}</p>
+    <div *ngFor="let jsons of json , let i = index">
+      <ol>
+        <li class="text-muted ">{{jsons.id}}</li>
+        <li class="text-muted ">{{jsons.updated_at | date}}</li>
+        <li class="text-muted ">{{jsons.owner.type}}</li>
+        <li class="text-muted ">{{jsons.owner.site_admin}}</li>
+      </ol>
+    </div>
+  </ng-container>
+  <div *ngIf="!json" class="bg-warning">
+    <p class="text-danger">
+      No hay datos !!!
+    </p>
+  </div>
+
 </div>
