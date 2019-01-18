@@ -18,7 +18,6 @@ export class ClientesComponent implements OnInit {
 		{ 'name': 'Iker', apellidos: 'Gossen', porcentaje: 0.927, activo: true }
 	];
 
-
 	model: any = {};
 	model2: any = {};
 	myValue; //variable Global
@@ -108,7 +107,7 @@ export class ClientesComponent implements OnInit {
 	ngOnInit() {
 
 		this.Empleados.forEach(function (value) {
-			console.log(value);
+			console.table(value);
 		});
 	}
 

@@ -11,6 +11,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { NgModule } from '@angular/core';
 
 
+// instalar bostratsp   npm install --save  bootstrap jquery popper.js
+// se cambias styles.ccs por .scss tanto el la extencion como el el archivo .angular-cli.json
+
+
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
